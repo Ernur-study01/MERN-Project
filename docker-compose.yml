@@ -9,6 +9,9 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=production
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
 
   frontend:
     build: ./Front
@@ -16,3 +19,17 @@ services:
       - "3000:80"
     depends_on:
       - backend
+
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+
+volumes:
+  mongo_data:
