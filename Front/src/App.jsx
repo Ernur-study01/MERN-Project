@@ -32,4 +32,4 @@ function App() {
   );
 }
 //1232212121212
-export default   App; 
+export default App;
