@@ -1,35 +1,30 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Импортируем роутинг
+
+// Импортируем страницы
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Home from './pages/Home'; // Страница главная
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    // Оборачиваем все маршруты в компонент Router, чтобы роутинг работал
+    <Router>
+      <div className="App">
+        {/* Определяем все маршруты внутри компонента Routes */}
+        <Routes>
+          {/* Главная страница */}
+          <Route path="/" element={<Home />} />
+
+          {/* Страница регистрации */}
+          <Route path="/register" element={<Register />} />
+
+          {/* Страница логина */}
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   );
 }
-//1232212121212
+
 export default App;

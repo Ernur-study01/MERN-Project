@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1742280222415,
+    "username": "testuser",
+    "password": "$2b$10$WfagDGhfL62Kv7.sEz6gw.f.L1nwrEEx0SslN70YxCAIDZ54vTDHG",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjI4MDIyMjQxNSwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc0MjI4MDIzNCwiZXhwIjoxNzQyMjgzODM0fQ.g07lhOdcDvj6WAu2FnGAWqr1QhmNS5iBOJ6qLK9pn7M"
+  },
+  {
+    "id": 1742282768210,
+    "username": "Ернур",
+    "password": "$2b$10$2YN9EynXDMtIkk90fHRgzeuiRc/K5kC7OriXv48B/ZozTHGr1enAW"
+  },
+  {
+    "id": 1742282795037,
+    "username": "Ернур01",
+    "password": "$2b$10$tSF86JEjJD4Pt4PLj98XPOX85ckPSINVEcJwxyrbsAxxFTe7IqxFy",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjI4Mjc5NTAzNywidXNlcm5hbWUiOiLQldGA0L3Rg9GAMDEiLCJpYXQiOjE3NDIyODI4MzQsImV4cCI6MTc0MjI4NjQzNH0.BmlLKcnfaGqUhiW9Co73U_4Gi3aIS-Y3xvZOEKzJC5k"
+  }
+]
