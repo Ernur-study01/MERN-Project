@@ -1,9 +1,14 @@
-let isLoggingEnabled = true; // Включено логирование по умолчанию
+import log from 'loglevel';
+
+let isLoggingEnabled = true; // Логирование включено по умолчанию
+
+// Устанавливаем уровень логирования (info)
+log.setLevel('info');
 
 const logger = {
   log: (...args) => {
     if (isLoggingEnabled) {
-      console.log(...args);
+      log.info(...args);
     }
   },
   enable: () => {

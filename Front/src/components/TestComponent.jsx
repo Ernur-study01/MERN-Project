@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import logger from "../utils/logger";
+import React, { useEffect } from 'react';
+import logger from '../utils/logger';
 
 const TestComponent = () => {
   useEffect(() => {
-    logger.log("🔵 Компонент смонтирован");
+    logger.log("🟢 Компонент смонтирован");
 
     return () => {
       logger.log("🔴 Компонент размонтирован");
@@ -11,7 +11,7 @@ const TestComponent = () => {
   }, []);
 
   return (
-    <div className="p-4 bg-gray-800 text-white rounded-md">
+    <div style={{ padding: '20px', backgroundColor: '#222', color: '#fff' }}>
       <strong>Я тестовый компонент!</strong>
     </div>
   );

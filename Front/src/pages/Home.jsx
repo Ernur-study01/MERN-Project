@@ -1,54 +1,49 @@
-import { useState } from "react";
-import TestComponent from "../components/TestComponent";
-import logger from "../utils/logger";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import TestComponent from '../components/TestComponent';
+import logger from '../utils/logger';
+import { Button, Layout, Typography } from 'antd';
+
+const { Header, Content } = Layout;
+const { Title } = Typography;
 
 const Home = () => {
   const [showComponent, setShowComponent] = useState(true);
-  const [isLoggingActive, setIsLoggingActive] = useState(logger.isEnabled());
+  const [loggingEnabled, setLoggingEnabled] = useState(true);
   const navigate = useNavigate();
 
   const toggleLogging = () => {
-    if (isLoggingActive) {
+    if (loggingEnabled) {
       logger.disable();
     } else {
       logger.enable();
     }
-    setIsLoggingActive(!isLoggingActive);
+    setLoggingEnabled(!loggingEnabled);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <h1 className="text-3xl font-bold mb-4">Логирование компонентов в React</h1>
-
-      <div className="flex gap-4 mb-4">
-        <button
-          onClick={() => setShowComponent(!showComponent)}
-          className="px-4 py-2 bg-black text-white rounded"
-        >
-          {showComponent ? "Скрыть компонент" : "Показать компонент"}
-        </button>
-
-        <button
-          onClick={toggleLogging}
-          className="px-4 py-2 bg-black text-white rounded"
-        >
-          {isLoggingActive ? "Отключить логирование" : "Включить логирование"}
-        </button>
-
-        <button
-          onClick={() => {
-            localStorage.removeItem("token"); // Удаляем токен
-            navigate("/login"); // Перенаправляем на страницу входа
-          }}
-          className="px-4 py-2 bg-red-600 text-white rounded"
-        >
+    <Layout style={{ minHeight: '100vh', backgroundColor: '#111' }}>
+      <Header style={{ backgroundColor: '#000', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Title style={{ color: '#fff', margin: 0 }}>Логирование компонентов в React</Title>
+        <Button type="primary" danger onClick={handleLogout}>
           Выйти
-        </button>
-      </div>
-
-      {showComponent && <TestComponent />}
-    </div>
+        </Button>
+      </Header>
+      <Content style={{ padding: '20px', textAlign: 'center' }}>
+        <Button onClick={() => setShowComponent(!showComponent)} style={{ marginRight: '10px' }}>
+          {showComponent ? "Скрыть компонент" : "Показать компонент"}
+        </Button>
+        <Button onClick={toggleLogging}>
+          {loggingEnabled ? "Отключить логирование" : "Включить логирование"}
+        </Button>
+        {showComponent && <TestComponent />}
+      </Content>
+    </Layout>
   );
 };
 

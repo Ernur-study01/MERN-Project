@@ -8,7 +8,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // предотвращаем перезагрузку страницы
 
     const response = await fetch('http://localhost:5000/register', {
       method: 'POST',
@@ -51,7 +51,6 @@ const Register = () => {
         </div>
         <button type="submit">Зарегистрироваться</button>
       </form>
-      <p>Уже есть аккаунт? <button onClick={() => navigate('/login')}>Войти</button></p>
     </div>
   );
 };
