@@ -1,30 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Импортируем роутинг
-
-// Импортируем страницы
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Home from './pages/Home'; // Страница главная
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 function App() {
-  return (
-    // Оборачиваем все маршруты в компонент Router, чтобы роутинг работал
-    <Router>
-      <div className="App">
-        {/* Определяем все маршруты внутри компонента Routes */}
-        <Routes>
-          {/* Главная страница */}
-          <Route path="/" element={<Home />} />
-
-          {/* Страница регистрации */}
-          <Route path="/register" element={<Register />} />
-
-          {/* Страница логина */}
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="*" element={<Login />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

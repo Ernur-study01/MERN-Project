@@ -11,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.24.4",
+    "loglevel": "^1.9.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.3.0",

@@ -8,12 +8,19 @@
   {
     "id": 1742282768210,
     "username": "Ернур",
-    "password": "$2b$10$2YN9EynXDMtIkk90fHRgzeuiRc/K5kC7OriXv48B/ZozTHGr1enAW"
+    "password": "$2b$10$2YN9EynXDMtIkk90fHRgzeuiRc/K5kC7OriXv48B/ZozTHGr1enAW",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjI4Mjc2ODIxMCwidXNlcm5hbWUiOiLQldGA0L3Rg9GAIiwiaWF0IjoxNzQyMzcxNTM1LCJleHAiOjE3NDIzNzUxMzV9.caTp-QJNFVNg3v3Q94HxyOHWWR55nCqz7wXSglCz4kI"
   },
   {
     "id": 1742282795037,
     "username": "Ернур01",
     "password": "$2b$10$tSF86JEjJD4Pt4PLj98XPOX85ckPSINVEcJwxyrbsAxxFTe7IqxFy",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjI4Mjc5NTAzNywidXNlcm5hbWUiOiLQldGA0L3Rg9GAMDEiLCJpYXQiOjE3NDIyODI4MzQsImV4cCI6MTc0MjI4NjQzNH0.BmlLKcnfaGqUhiW9Co73U_4Gi3aIS-Y3xvZOEKzJC5k"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjI4Mjc5NTAzNywidXNlcm5hbWUiOiLQldGA0L3Rg9GAMDEiLCJpYXQiOjE3NDIzNjA1NjksImV4cCI6MTc0MjM2NDE2OX0.LcHbpq-R3Ot5gAD-Ja-GBQiwzIU0tIkjcigBL-4y_aI"
+  },
+  {
+    "id": 1742360593730,
+    "username": "Болат",
+    "password": "$2b$10$Z5cXk0W7mpFmFzkss6mrtuk7fhtxLTcWsoW5Z.I70W9b5NsRkRFrK",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0MjM2MDU5MzczMCwidXNlcm5hbWUiOiLQkdC-0LvQsNGCIiwiaWF0IjoxNzQyMzcyMjc4LCJleHAiOjE3NDIzNzU4Nzh9.I9YJL_voM7EgIqhM56myX9Sp9GRO1adEiazjZCTDZAE"
   }
 ]

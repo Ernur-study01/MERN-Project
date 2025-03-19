@@ -4,15 +4,18 @@
     "@babel/eslint-parser": "^7.26.8",
     "@babel/preset-react": "^7.26.3",
     "@commitlint/config-conventional": "^19.8.0",
+    "autoprefixer": "^10.4.21",
     "commitlint": "^19.8.0",
     "eslint": "^9.22.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "stylelint": "^16.15.0",
-    "stylelint-config-standard": "^37.0.0"
+    "stylelint-config-standard": "^37.0.0",
+    "tailwindcss": "^4.0.14"
   },
   "scripts": {
     "prepare": "husky install"
@@ -269,7 +272,6 @@
     "picomatch": "^2.3.1",
     "pidtree": "^0.6.0",
     "possible-typed-array-names": "^1.1.0",
-    "postcss": "^8.5.3",
     "postcss-resolve-nested-selector": "^0.1.6",
     "postcss-safe-parser": "^7.0.1",
     "postcss-selector-parser": "^7.1.0",

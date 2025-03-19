@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     const response = await fetch('http://localhost:5000/register', {
@@ -18,18 +19,20 @@ const Register = () => {
     });
 
     const data = await response.json();
+
     if (data.user) {
       alert('Пользователь успешно зарегистрирован!');
       navigate('/login'); // Перенаправляем на страницу логина
     } else {
-      alert(data.error); // Показываем ошибку при регистрации
+      setError(data.error); // Показываем ошибку при регистрации
     }
   };
 
   return (
     <div>
       <h2>Создать аккаунт</h2>
-      <form onSubmit={handleSubmit}>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <form onSubmit={handleRegister}>
         <div>
           <label>Имя пользователя:</label>
           <input
@@ -48,6 +51,7 @@ const Register = () => {
         </div>
         <button type="submit">Зарегистрироваться</button>
       </form>
+      <p>Уже есть аккаунт? <button onClick={() => navigate('/login')}>Войти</button></p>
     </div>
   );
 };
